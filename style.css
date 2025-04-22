@@ -12,6 +12,24 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Place it behind any potential future content */
-    display: block; /* Make the <a> tag fill the entire space */
+    z-index: -1;
+    display: block;
+}
+
+/* Responsive adjustments (example for smaller screens) */
+@media (max-width: 768px) {
+    .background-image {
+        /* You might adjust background-position or other properties for smaller screens */
+        background-position: center center; /* Example: Ensure center is always visible */
+    }
+}
+
+/* You can add more media queries for different screen sizes if needed */
+/* For example, for even smaller mobile devices: */
+@media (max-width: 480px) {
+    .background-image {
+        /* Further adjustments if the image doesn't look right */
+        /* For instance, you could change background-size to 'contain' if cropping is an issue, */
+        /* but 'cover' is generally preferred for a full background. */
+    }
 }
