@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Larger Responsive Image</title>
+<title>Image with Corner Margin</title>
 <style>
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     margin: 0;
-    background-color: #121212; /* Dark background color */
+    overflow: hidden;
+    background-color: #121212;
   }
 
   .link-container {
-    display: block;
-    width: 95vw; /* Take up more of the viewport width */
-    max-width: 600px; /* Increase maximum width for larger portrait screens */
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px; /* Add padding around the image */
+    box-sizing: border-box; /* Include padding in width and height */
   }
 
   .link-container img {
     display: block;
     width: 100%;
-    height: auto;
-    max-height: 90vh; /* Take up more of the viewport height */
-    object-fit: contain; /* Ensure the entire image is visible */
-  }
-
-  /* Media query for landscape orientation on mobile */
-  @media (max-aspect-ratio: 1/1) and (max-width: 767px) {
-    .link-container {
-      width: 90vh; /* Take up more of the viewport height in landscape */
-      max-width: none;
-      max-height: 95vw; /* Take up more of the viewport width in landscape */
-    }
+    height: 100%;
+    object-fit: contain; /* Show the entire image, letterboxing if necessary */
   }
 </style>
 </head>
 <body>
 
   <a href="https://doodpl.site/TDyEQ1T" target="_blank" class="link-container">
-    <img src="https://i.imgur.com/qRbKzC8.png" alt="Larger Responsive Image Link">
+    <img src="https://i.imgur.com/qRbKzC8.png" alt="Image with Margin">
   </a>
 
 </body>
