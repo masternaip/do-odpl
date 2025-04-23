@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Linked Image</title>
+<title>Responsive Linked Image</title>
 <style>
   body {
     display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
-    margin: 0; /* Remove default body margins */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Dark background color */
   }
 
   .link-container {
-    /* You can add styling to the container if needed, like a specific size or shape */
+    display: block;
+    max-width: 90%;
+    height: auto;
   }
 
   .link-container img {
-    /* Optional: Style the image itself, e.g., set a maximum width */
-    max-width: 500px;
+    display: block;
+    width: 100%;
     height: auto;
-    display: block; /* Remove any extra space below the inline image */
+  }
+
+  /* Media query for mobile screens */
+  @media (max-width: 767px) {
+    .link-container {
+      max-width: 100%; /* Make the image fill the screen width on mobile */
+    }
+    .link-container img {
+      width: 100%; /* Make the image fill the screen width on mobile */
+      height: 100vh; /* Make the image fill the screen height on mobile */
+      object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    }
+  }
+
+  /* Media query for larger screens (PC) */
+  @media (min-width: 768px) {
+    .link-container {
+      max-width: 500px;
+    }
   }
 </style>
 </head>
 <body>
 
   <a href="https://doodpl.site/TDyEQ1T" target="_blank" class="link-container">
-    <img src="https://i.imgur.com/qRbKzC8.png" alt="Image Link">
+    <img src="https://i.imgur.com/qRbKzC8.png" alt="Responsive Image Link">
   </a>
 
 </body>
